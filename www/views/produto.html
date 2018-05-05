@@ -1,9 +1,9 @@
-<ion-view view-title="Produto X">
+<ion-view view-title="{{produto.nome}}">
     <ion-content>
         <div class="card">
             <div class="item item-body">
-                <img src="https://lorempixel.com/400/200/" class="full-image">
-                <p>R$ 999,99</p>
+                <img ng-src="https://lorempixel.com/400/200/technics/{{produto.id}}" class="full-image">
+                <p>R$ {{produto.preco}}</p>
             </div>
             <a class="item item-icon-left assertive">
                 <i class="icon ion-bag"></i>

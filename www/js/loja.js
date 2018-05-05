@@ -15,10 +15,17 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
 });
 
-app.controller('principalCtrl', function ($scope) {
-
+app.controller('principalCtrl', function ($scope, $http) {
+    $scope.produtos = [];
+    $http.get('produtos.json').then(function (response) {
+        $scope.produtos = response.data;
+    });
 });
 
-app.controller('produtoCtrl', function ($scope) {
-
+app.controller('produtoCtrl', function ($scope, $stateParams) {
+    $scope.produto = {
+        id: $stateParams.id,
+        nome: 'Produto ' + $stateParams.id,
+        preco: '123,45'
+    };
 });
