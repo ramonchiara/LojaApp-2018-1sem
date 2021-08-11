@@ -6,6 +6,11 @@
     "gulp": "^4.0.2",
     "gulp-clean-css": "^3.7.0",
     "gulp-rename": "^1.2.0",
-    "gulp-sass": "^5.0.0"
+    "gulp-sass": "^5.0.0",
+    "npm-force-resolutions": "0.0.10"
+  },
+  "resolutions": {
+    "yargs-parser": ">=13.1.2 <14.0.0 || >=15.0.1 <16.0.0 || >=18.1.2",
+    "glob-parent": ">=5.1.2"
   }
 }
